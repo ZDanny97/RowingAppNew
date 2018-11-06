@@ -1,0 +1,82 @@
+.column {
+    float: left;
+    width: 25%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.middle{ 
+	margin: 0 auto; 
+	width: 180px; 
+}
+
+.container{
+	width:45%;
+    min-height: 48%;
+    padding:1em;
+    margin:0 auto;
+}
+
+#lightblue{
+    background: blue;
+}
+
+#red{
+    background: red;
+}
+
+#green{
+    background: green;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+}
+
+ul {
+    display: inline-block;
+    *display: inline;
+    zoom: 1
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div *{
+  margin:0;
+}
+
+a {
+  margin:0;
+  padding:0;
+}
+
+footer{
+  border:solid;
+}

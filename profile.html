@@ -1,0 +1,46 @@
+<?php
+session_start();
+$_SESSION["coach"] = false;
+?>
+<HTML LANG="es">
+<HEAD>
+  <div style="background: darkgray;">
+    <LINK REL="stylesheet" TYPE="text/css" HREF="stylelogin.css">
+    <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <img src="Images/rowers.png" width="10%" height="15%" class="center">
+    <a href="profile.html"><img src='' width="5%" height="10%" class="right"></a>
+  <hr>
+  </div>
+</HEAD>
+<BODY> 
+  <form action="functioncalling.php">
+  <div class="container">
+    <label for="team"><b>Team</b></label>
+    <input id="team" type="text" placeholder="Enter Team" name="uname" required>
+    <label for="psw"><b>Password</b></label>
+    <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+    <label class="switch">
+     <input type="checkbox" onclick="iscoach()">
+     <span class="slider round"></span>
+     <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coach</b>
+     </label>
+     <label>&nbsp;</label>
+    <button type="reset" style="padding:10px;">Login</button>
+  </div>
+  <div class="container">
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+</form>
+<?php
+var iscoach = $_SESSION["coach"]:
+   if(iscoach == false){
+     echo "<script type='text/javascript'>alert('coach on');</script>";
+     $_SESSION["coach"] = true;
+   }else{
+     echo "<script type='text/javascript'>alert('coach off');</script>";
+     $_SESSION["coach"] = false;
+   }
+?>
+</BODY>
+</HTML>

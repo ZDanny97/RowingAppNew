@@ -1,0 +1,130 @@
+<?php
+session_start();
+?>
+<HTML LANG="es">
+<HEAD>
+  <div style="background: darkgray;">
+   <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+    <script src="Session.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <img src="Images/rowers.png" width="10%" height="15%" class="center">
+    <a href="profile.html"><img src='' width="5%" height="10%" class="right"></a>
+  <hr>
+  </div>
+</HEAD>
+<BODY>
+  <div id="dayslist" style="background: lightgray;">
+    <select>
+      <option value="1">Today</option>
+    </select>
+    <hr>
+  </div>
+  <div id="topbuttons" style="background: darkgray;">
+    <div class="row">
+      <div class="column" id="weather">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/32d72n117d16/san-diego/?unit=us" data-mode="Current"></a>
+        <script>
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+      </div>
+      <div class="column" id="wind">
+        <iframe src="https://www.meteoblue.com/en/weather/widget/daily?geoloc=detect&days=2&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&precipunit=INCH&coloured=coloured&pictoicon=0&maxtemperature=0&mintemperature=0&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="false" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 108px;height: 150px"></iframe>
+      </div>
+      <div class="column">
+        <a href="livestream.html"><img src="Images/camera.jpg" width="25%" height="15%" class="center"></a>
+      </div>
+      <div class="column" id="tides">
+        <div style="width: 120px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=97123" width="120" height="228" frameborder="0" scrolling="no"></iframe><a style="display: block;margin: 0px 0 0 0;height: 0px;text-indent: -9999em;position: relative;z-index: 1" href="https://www.willyweather.com/ca/san-diego-county/san-diego.html" rel="nofollow">San Diego tides forecast</a></div>
+      </div>
+    </div>
+    <hr> 
+  </div>
+  <div id="lineup-workout" style="background: lightgray;">
+    <div class="middle">
+    <button type="button" id="lineup-button" style="border: none; color: blue; background: lightgray; text-decoration: underline;" onclick="lineup()">Lineups</button>
+    <button type="button" id="workout-button" style="border: none; color: black; background: lightgray; text-decoration: underline;" onclick="workout()">Workout</button>
+    </div>
+    <div class="container">
+      <div id="lineup-container" style="background: lightgray;">
+        <ul style="list-style: none;">
+          <li>Boat: Relentless</li>
+          <li>Oars: Green</li>
+          <li>B <input type="text" name="fname" id="lightblue"></li>
+          <li>O <input type="text" name="fname" id="red"></li>
+          <li>C <input type="text" name="fname" id="green"></li>
+          <li>8 <input type="text" name="fname" id="red"></li>
+          <li>7 <input type="text" name="fname" id="green"></li>
+          <li>6 <input type="text" name="fname" id="red"></li>
+          <li>5 <input type="text" name="fname" id="green"></li>
+          <li>4 <input type="text" name="fname" id="red"></li>
+          <li>3 <input type="text" name="fname" id="green"></li>
+          <li>2 <input type="text" name="fname" id="red"></li>
+          <li>1 <input type="text" name="fname" id="green"></li>
+        </ul>
+        <ul style="list-style: none;">
+          <li>Boat: Alcala</li>
+          <li>Oars: Red</li>
+          <li>B <input type="text" name="fname" id="lightblue"></li>
+          <li>O <input type="text" name="fname" id="red"></li>
+          <li>C <input type="text" name="fname" id="green"></li>
+          <li>8 <input type="text" name="fname" id="red"></li>
+          <li>7 <input type="text" name="fname" id="green"></li>
+          <li>6 <input type="text" name="fname" id="red"></li>
+          <li>5 <input type="text" name="fname" id="green"></li>
+          <li>4 <input type="text" name="fname" id="red"></li>
+          <li>3 <input type="text" name="fname" id="green"></li>
+          <li>2 <input type="text" name="fname" id="red"></li>
+          <li>1 <input type="text" name="fname" id="green"></li>
+        </ul>
+      </div>
+      <div id="workout-container" style="display:none; background: lightgray;">
+        <ul style="list-style: none; border:gray;">
+          <li>To East Bay</li>
+          <li>Warm-up:</li>
+          <li> 6s 4`(I`/I`/I`) reverse pick</li>
+          <li>Workout:</li>
+          <li>4x10` @20,22,24,22</li>
+        </ul>
+      </div>
+    </div>  
+  <hr>    
+  </div>
+  <div id="bottombuttons" style="background: darkgray;">
+    <div class="row">
+      <div class="column">
+         <a href="Index.html"><img src="Images/home.png" width="20%" height="15%" class="center"></a>
+      </div>
+      <div class="column">
+         <a href="roster.html"><img src="Images/people.png" width="20%" height="15%" class="center"></a>
+      </div>
+      <div class="column">
+         <a href="timer.html"><img src="Images/timer.png" width="20%" height="15%" class="center"></a>
+      </div>
+      <div class="column">
+         <a href="calendar.html"><img src="Images/calendar.png" width="20%" height="15%" class="center"></a>
+      </div>
+    </div>
+    <hr> 
+  </div>  
+</BODY>
+<script src="Session.js" type="text/javascript">
+window.onload = alert(window.localStorage.getItem("storageName"));
+
+ document.getElementById('myImage').onload = function() { 
+    alert("done"); 
+  }
+
+function lineup() {
+    document.getElementById("lineup-button").style.color= "blue";
+    document.getElementById("lineup-container").style.display="unset";
+    document.getElementById("workout-button").style.color= "black";
+    document.getElementById("workout-container").style.display="none";
+}
+function workout() {
+    document.getElementById("workout-button").style.color= "blue";
+    document.getElementById("workout-container").style.display="unset";
+    document.getElementById("lineup-button").style.color= "black";
+    document.getElementById("lineup-container").style.display="none";
+}
+</script>
+</HTML>

@@ -1,7 +1,3 @@
-<?php
-session_start();
-$_SESSION["coach"] = false;
-?>
 <HTML LANG="es">
 <HEAD>
   <div style="background: darkgray;">
@@ -14,7 +10,7 @@ $_SESSION["coach"] = false;
   </div>
 </HEAD>
 <BODY> 
-  <form action="functioncalling.php">
+  <form>
   <div class="container">
     <label for="team"><b>Team</b></label>
     <input id="team" type="text" placeholder="Enter Team" name="uname" required>
@@ -26,21 +22,47 @@ $_SESSION["coach"] = false;
      <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coach</b>
      </label>
      <label>&nbsp;</label>
-    <button type="reset" style="padding:10px;">Login</button>
+    <button type="reset" style="padding:10px;" onclick="login()">Login</button>
   </div>
   <div class="container">
     <button type="button" class="cancelbtn">Cancel</button>
   </div>
 </form>
-<?php
-var iscoach = $_SESSION["coach"]:
-   if(iscoach == false){
-     echo "<script type='text/javascript'>alert('coach on');</script>";
-     $_SESSION["coach"] = true;
-   }else{
-     echo "<script type='text/javascript'>alert('coach off');</script>";
-     $_SESSION["coach"] = false;
-   }
-?>
+<script type="text/javascript">
+  var coach = false;
+
+  function iscoach(){
+    if(coach == false){
+      alert("coach is on");
+      coach = true;
+    }
+    else{
+      alert("coach is off");
+      coach = false;
+    }
+  }
+
+  function login(){
+    if(document.getElementById("team").value== 'Tritons' && document.getElementById("password").value == 'ucsd'){
+      if(coach == true){
+        alert("logged in as coach");
+        window.sessionStorage.setItem('user', 'Coach');
+        window.location = "Index.html";
+      }else{
+        alert("logged in as rower");
+        window.sessionStorage.setItem('user', 'Rower');
+        window.location = "Index.html";
+      }
+    }
+    else{
+      coach=false;
+      if(document.getElementById("team").value == 'Tritons'){
+        alert("wrong password");
+      }else{
+        alert("Team doesn´t exist");
+      }
+    }
+  }
+</script>
 </BODY>
 </HTML>

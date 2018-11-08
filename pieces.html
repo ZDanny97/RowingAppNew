@@ -1,0 +1,87 @@
+<HTML LANG="es">
+<HEAD>
+  <div style="background: darkgray;">
+   <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+    <script src="Session.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <img src="Images/rowers.png" width="10%" height="15%" class="center">
+    <a href="profile.html"><img id="profile" src="" width="5%" height="10%" class="right"></a>
+  <hr>
+  </div>
+</HEAD>
+<BODY style="background: lightgray;">
+   <div style="width:100%;;position: relative; top: 20%; transform: translateY(-50%);transform: translateX(40%); margin:0 auto;">
+    <ul style="list-style: none;" id="piecesul">
+      <li>Pieces</li>
+      <li id="#1">#1 - 10 @' 20</li>
+      <li id="#2">#2 - 10 @' 22</li>
+      <li id="#3">#3 - 10 @' 24</li>
+      <li id="#4">#4 - 10 @' 22</li>
+    </ul>
+    <ul style="list-style: none;" id="piecesul">
+      <li></li>
+      <li><button id="button1" onClick="window1()">Results</button></li>
+      <li><button id="button2" onClick="window2()">Results</button></li>
+      <li><button id="button3" onClick="window3()">Results</button></li>
+      <li><button id="button4" onClick="window4()">Results</button></li>
+    </ul>
+   </div>
+</BODY>
+<FOOTER>
+  <div id="bottombuttons" style="background: darkgray;">
+    <div class="row">
+      <div class="column">
+         <a href="Index.html"><img src="Images/home.png" width="20%" height="15%" class="center"><label id="bottomtext">Home</label></a>
+      </div>
+      <div class="column">
+         <img src="Images/people.png" width="20%" height="15%" class="center"><label id="bottomtext">Roster</label>
+      </div>
+      <div class="column">
+         <a href="pieces.html"><img src="Images/timer.png" width="20%" height="15%" class="center"><label id="bottomtext">Pieces</label></a>
+      </div>
+      <div class="column">
+         <a href="calendar.html"><img src="Images/calendar.png" width="20%" height="15%" class="center"><label id="bottomtext">Calendar</label></a>
+      </div>
+    </div>
+    <hr> 
+</FOOTER> 
+<script>
+var user = window.sessionStorage.getItem('user');
+
+if(user != null){
+  if (user  == "Coach"){
+        document.getElementById("profile").src = "Images/C.png";
+      }
+      else{
+        document.getElementById("profile").src = "Images/profile.png";
+      }
+}
+else{
+  document.getElementById("profile").src = "Images/user.png";
+}
+
+function window1(){
+	window.sessionStorage.setItem('piece', document.getElementById('#1').innerHTML);
+	MyWindow=window.open('pieces-popup.html','MyWindow',width=600,height=300);
+	return false;
+}
+
+function window2(){
+	window.sessionStorage.setItem('piece', document.getElementById('#2').innerHTML);
+	MyWindow=window.open('pieces-popup.html','MyWindow',width=600,height=300);
+	return false;
+}
+
+function window3(){
+	window.sessionStorage.setItem('piece', document.getElementById('#3').innerHTML);
+	MyWindow=window.open('pieces-popup.html','MyWindow',width=600,height=300);
+	return false;
+}
+
+function window4(){
+	window.sessionStorage.setItem('piece', document.getElementById('#4').innerHTML);
+	MyWindow=window.open('pieces-popup.html','MyWindow',width=600,height=300);
+	return false;
+}
+</script>
+</HTML>

@@ -9,7 +9,8 @@
   <hr>
   </div>
 </HEAD>
-<BODY>
+<BODY >
+ <div id="container"> 
   <div id="dayslist" style="background: lightgray;">
     <select>
       <option value="1">Today</option>
@@ -86,24 +87,26 @@
     </div>  
   <hr>    
   </div>
+</div>  
+</BODY>
+<FOOTER>
   <div id="bottombuttons" style="background: darkgray;">
     <div class="row">
       <div class="column">
-         <a href="Index.html"><img src="Images/home.png" width="20%" height="15%" class="center"></a>
+         <a href="Index.html"><img src="Images/home.png" width="20%" height="15%" class="center"><label id="bottomtext">Home</label></a>
       </div>
       <div class="column">
-         <a href="roster.html"><img src="Images/people.png" width="20%" height="15%" class="center"></a>
+         <img src="Images/people.png" width="20%" height="15%" class="center"><label id="bottomtext">Roster</label>
       </div>
       <div class="column">
-         <a href="timer.html"><img src="Images/timer.png" width="20%" height="15%" class="center"></a>
+         <a href="pieces.html"><img src="Images/timer.png" width="20%" height="15%" class="center"><label id="bottomtext">Pieces</label></a>
       </div>
       <div class="column">
-         <a href="calendar.html"><img src="Images/calendar.png" width="20%" height="15%" class="center"></a>
+         <a href="calendar.html"><img src="Images/calendar.png" width="20%" height="15%" class="center"><label id="bottomtext">Calendar</label></a>
       </div>
     </div>
     <hr> 
-  </div>  
-</BODY>
+</FOOTER> 
 <script>
 var user = window.sessionStorage.getItem('user');
 if(user != null){

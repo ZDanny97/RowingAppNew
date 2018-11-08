@@ -45,17 +45,30 @@
     background: green;
 }
 
+#bottomtext {
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+}
+
+#piecesul li{
+  margin: 0 0 4px 0
+}
+
+#container { 
+  position: relative; 
+  /* updated to support footer push */
+  min-height: 100%;
+  padding-bottom: 8%; /* must be the same as footer height */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    }
+
 html, body{
   padding: 0;
   margin: 0;
-}
-
-html{
   height: 100%;
-}
-
-body{
-  min-height: 100%;
 }
 
 ul {
@@ -77,6 +90,10 @@ a {
   padding:0;
 }
 
-footer{
-  border:solid;
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }

@@ -4,7 +4,7 @@
 </HEAD>
 <BODY style="background: lightgray;">
    <label id="piece" style="display: block; text-align: center; line-height: 250%;"></label>
-   <label id="piece" style="display: block; text-align: center; line-height: 250%;">Who won?</label>
+   <!-- <label id="piece" style="display: block; text-align: center; line-height: 250%;">Who won?</label>-->
    <div style="width:100%;;position: relative; top: 10%; transform: translateY(-50%);transform: translateX(0%); margin:0 auto;">
       <ul style="list-style: none;">
           <li id="boatname1">Boat: Relentless</li>
@@ -20,7 +20,8 @@
           <li>3 <input type="text" name="fname" id="green"></li>
           <li>2 <input type="text" name="fname" id="red"></li>
           <li>1 <input type="text" name="fname" id="green"></li>
-          <button id="team1" onclick="winner1()"></button>
+          <!-- <button id="team1" onclick="winner1()"></button> -->
+          <label>1st</label>
         </ul>
         <ul style="list-style: none;">
           <li id="boatname2">Boat: Alcala</li>
@@ -36,23 +37,34 @@
           <li>3 <input type="text" name="fname" id="green"></li>
           <li>2 <input type="text" name="fname" id="red"></li>
           <li>1 <input type="text" name="fname" id="green"></li>
-          <button id="team2" onclick="winner2()"></button>
+          <!-- <button id="team2" onclick="winner2()"></button> -->
+          <label>2st</label>
         </ul>
+      <div class="container">
+        <button onclick="winner()">done</button> 
+      </div>
    </div>
 </BODY>
 <script>
 var piece = window.sessionStorage.getItem('piece');
 sessionStorage.removeItem('piece');
 document.getElementById('piece').innerHTML = piece;
-document.getElementById('team1').innerHTML = document.getElementById('boatname1').innerHTML;
-document.getElementById('team2').innerHTML = document.getElementById('boatname2').innerHTML;
-function winner1(){
+/*document.getElementById('team1').innerHTML = document.getElementById('boatname1').innerHTML;
+document.getElementById('team2').innerHTML = document.getElementById('boatname2').innerHTML;*/
+
+function winner()
+{
+  MyWindow=window.close();
+}
+
+/*function winner1(){
   alert(document.getElementById('boatname1').innerHTML + " Won")
   MyWindow=window.close();
 }
 function winner2(){
   alert(document.getElementById('boatname2').innerHTML + " Won")
   MyWindow=window.close();
-}
+}*/
+
 </script>
 </HTML>

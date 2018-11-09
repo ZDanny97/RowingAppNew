@@ -20,19 +20,19 @@
   <div id="topbuttons" style="background: darkgray;">
     <div class="row">
       <div class="column" id="weather">
-        <a class="weatherwidget-io" href="https://forecast7.com/en/32d72n117d16/san-diego/?unit=us" data-mode="Current"></a>
-        <script>
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-        </script>
+        <div style="width: 120px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=97309" width="120" height="171" frameborder="0" scrolling="no"></iframe><a style="z-index: 1;margin: -20px 0 0 0;display: block;position: relative;height: 20px;text-indent: -9999em" href="https://www.willyweather.com/ca/san-diego-county/san-diego.html" rel="nofollow">San Diego weather</a></div>
+        <!--<a onClick="weather()" ><img src="Images/weather.png" width="25%" height="15%" class="center"></a>-->
       </div>
       <div class="column" id="wind">
-        <iframe src="https://www.meteoblue.com/en/weather/widget/daily?geoloc=detect&days=2&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&precipunit=INCH&coloured=coloured&pictoicon=0&maxtemperature=0&mintemperature=0&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="false" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 108px;height: 150px"></iframe>
+        <div style="width: 120px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=97311" width="210" height="171" frameborder="0" scrolling="no"></iframe><a style="position: relative;display: block;text-indent: -9999em;height: 20px;z-index: 1;margin: -20px 0 0 0" href="https://www.willyweather.com/ca/san-diego-county/san-diego.html" rel="nofollow">local wind</a></div>
+        <!--<a onClick="wind()" ><img src="Images/wind.jpg" width="25%" height="15%" class="center"></a>-->
       </div>
       <div class="column">
         <a href="http://portal.hdontap.com/s/embed/?stream=catamaran-ptz_eh-CUST&amp;ratio=16:9"><img src="Images/camera.jpg" width="25%" height="15%" class="center"></a>
       </div>
-      <div class="column" id="tides">
-        <div style="width: 120px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=97123" width="120" height="228" frameborder="0" scrolling="no"></iframe><a style="display: block;margin: 0px 0 0 0;height: 0px;text-indent: -9999em;position: relative;z-index: 1" href="https://www.willyweather.com/ca/san-diego-county/san-diego.html" rel="nofollow">San Diego tides forecast</a></div>
+      <div class="column" id="waves">
+        <div style="width: 120px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=97312" width="120" height="171" frameborder="0" scrolling="no"></iframe><a style="position: relative;z-index: 1;margin: -20px 0 0 0;height: 20px;text-indent: -9999em;display: block" href="https://www.willyweather.com/ca/san-diego-county/san-diego.html" rel="nofollow">san diego's tides</a></div>
+       <!-- <a onClick="waves()" ><img src="Images/tides.jpg" width="25%" height="15%" class="center"></a>-->
       </div>
     </div>
     <hr> 
@@ -96,7 +96,7 @@
          <a href="Index.html"><img src="Images/home.png" width="20%" height="15%" class="center"><label id="bottomtext">Home</label></a>
       </div>
       <div class="column">
-         <img src="Images/people.png" width="20%" height="15%" class="center"><label id="bottomtext">Roster</label>
+         <a href="roster.html"><img src="Images/people.png" width="20%" height="15%" class="center"><label id="bottomtext">Roster</label></a>
       </div>
       <div class="column">
          <a href="pieces.html"><img src="Images/timer.png" width="20%" height="15%" class="center"><label id="bottomtext">Pieces</label></a>
